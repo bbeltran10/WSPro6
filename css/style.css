@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #6a0dad;
+  --secondary-color: #ccccff;
+  --background-color: #f4f0ff; 
+  --text-color: #2e2e2e;
+  --completed-color: #aaa;
+  --error-color: #ff4d4d;
+  --button-hover: #7b3dbd;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+}
+h2 {
+  color: var(--secondary-color);
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="text"], select {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Error message */
+.error {
+  color: var(--error-color);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Filters */
+.filters, .tag-filters {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.filters button, .tag-filters button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border-radius: 6px;
+}
+
+.filters button:hover, .tag-filters button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 8px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border-left: 5px solid var(--primary-color);
+  transition: transform 0.1s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: var(--completed-color);
+  border-left-color: var(--secondary-color);
+}
+
+li button {
+  margin-left: 5px;
+  padding: 4px 8px;
+  font-size: 0.9em;
+}
+
+/* Counter */
+#task-counter {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
+}
