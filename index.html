@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo App with Tags</title>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Todo List</h2>
+
+<form id="task-form">
+  <input type="text" id="task-input" placeholder="Enter task">
+  <select id="tag-input">
+    <option value="">No tag</option>
+    <option value="school">School</option>
+    <option value="work">Work</option>
+    <option value="personal">Personal</option>
+  </select>
+  <button type="submit">Add Task</button>
+</form>
+<div class="error" id="error-msg"></div>
+
+<div class="filters">
+  <button data-filter="all">All</button>
+  <button data-filter="active">Active</button>
+  <button data-filter="completed">Completed</button>
+</div>
+
+<div class="tag-filters">
+  <h2>Filter by tag:</h2>
+  <button data-tag="">All</button>
+  <button data-tag="school">School</button>
+  <button data-tag="work">Work</button>
+  <button data-tag="personal">Personal</button>
+</div>
+
+<p id="task-counter">0 active tasks</p>
+
+<ul id="task-list"></ul>
+
+<script src="js/script.js"></script>
+</body>
+</html>
